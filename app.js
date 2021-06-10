@@ -270,7 +270,7 @@ let moverdulces= setInterval(moverocks,intervalo2);
 
       if(overlaps(candy,jet)){
         
-          alert("game over" + "haz durado: "+ minutesLabel.innerText+"minutos" + "y " + secondsLabel.innerText +"segundos");
+          alert("game over " + "haz durado: "+ minutesLabel.innerText+" minutos " + "y " + secondsLabel.innerText +" segundos");
        
         
         

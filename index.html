@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter</title>
+  </head>
+  <style>
+    body {
+      width: 100%;
+      overflow: hidden;
+      background-size: cover;
+      background-image: url("imgs/pixelbackground.jpg");
+    }
+    #board {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 40px auto;
+      border: 2px solid white;
+      background-image: url("imgs/bobble_glow_blue.png");
+      overflow: hidden;
+    }
+
+    #jet {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url("imgs/diente-limpio.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      left:0px;
+      bottom: 0px;
+    }
+
+    .bullets {
+      position: absolute;
+      bottom: 40px;
+      left: 51%;
+      width: 20px;
+      height: 20px;
+      background: url('imgs/drop-3.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .candies {
+      position: absolute;
+      top: -80px;
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+
+    #timer {
+      position: relative;
+      top:5px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: white;
+  }
+
+
+  #Leyenda{
+    position:relative;
+    text-align: center;
+    color: white;
+  }
+
+  #Title{
+    position:relative;
+    text-align: center;
+    font-size: 30px;
+    color: hotpink;
+  }
+
+  .level h1{
+    position: relative;
+      top:10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: hotpink;
+  }
+  </style>
+  
+  <body>
+
+    <div id="Title">
+      <h1>¡Evita los dulces!</h1>
+    </div>
+
+    <div id="timer">
+      <label id="minutes">00</label>
+      <label id="colon">:</label>
+      <label id="seconds">00</label>
+    </div>
+
+    <div class="level" >
+      <h1>Level 1</h1>
+    </div>
+    
+    <div id="board">
+      <div class="candies">
+
+      </div>
+      <div id="jet"></div>
+    </div>
+    <div id="Leyenda">
+      <h1>Utiliza las teclas derecha e izquierda para evitar los dulces:D</h1>
+
+    </div>
+
+    <script src="app.js" defer></script>
+
+  </body>
+</html>

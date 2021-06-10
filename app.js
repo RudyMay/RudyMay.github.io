@@ -104,11 +104,11 @@ window.addEventListener('keydown', (e)=>{
 });
 
 
-window.addEventListener("keyup", (e) => {
+/* window.addEventListener("keyup", (e) => {
   
   
  
-  if (e.key == "ArrowUp" || e.keyCode == 32) {
+  if ( e.keyCode == 32) {
     //32 is for space key
     const bullet = document.createElement("div");
     bullet.classList.add("bullets");
@@ -170,7 +170,7 @@ window.addEventListener("keyup", (e) => {
       
     },500);
   }
-});
+}); */
 
 
 let intervalo=1000;

@@ -262,7 +262,7 @@ let moverdulces= setInterval(moverocks,intervalo2);
       
 
       candy.style.top = candytop + 33 + "px";
-      if(candytop>650){
+      if(candytop>550){
         candy.parentElement.removeChild(candy);
       }
 

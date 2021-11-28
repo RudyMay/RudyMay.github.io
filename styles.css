@@ -1,0 +1,270 @@
+body {
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("imgs/FondoSi.png");
+  overflow-y: auto;
+}
+
+#title{
+  position:relative;
+  text-align: center;
+  font-size: 60px;
+  color: black;
+}
+
+#level{
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+#board {
+  position: relative;
+  cursor: default;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 977px;
+  height: 500px;
+  margin: 40px auto 0px;
+  border: 2px solid white;
+  background-image: url("imgs/N1.png");
+  background-size: contain;
+  overflow: hidden;
+}
+
+#jet {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  left:0px;
+  bottom: 0px;
+}
+
+#tooth {  
+  height: 100%;
+  width: 100%;
+
+  animation-name: destroy;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-play-state: paused;
+}
+
+@keyframes destroy {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+.bullets {
+  position: absolute;
+  bottom: 40px;
+  left: 51%;
+  width: 20px;
+  height: 20px;
+  background: url('imgs/drop-3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.candies {
+  position: absolute;
+  top: -80px;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#timer {
+  position: relative;
+  top:5px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+#leyenda{
+  position:relative;  
+  text-align: center;
+  color: black;  
+}
+
+#leyenda h1 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#advice {
+  position: absolute;
+  visibility: hidden;
+  z-index: 99;
+
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0px;
+  color: white;
+
+  animation-name: growEffect;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+@keyframes growEffect {
+  0% {
+    font-size: 0px;
+  }
+  10% {
+    font-size: 40px;;
+  }
+  25% {
+    font-size: 50px;
+  }
+  75% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 0px;
+  }
+}
+
+#wingame {
+  position: relative;  
+  display: none;
+  z-index: 99;
+
+  /* opacity: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 42px;
+  color: white; */
+
+  animation-name: show;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#messageContainer {
+  z-index: 99;
+  position: absolute; 
+  width: 500px;
+  height: 500px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#gameover {
+  position: relative;  
+  display: none;
+  z-index: 99;
+
+  opacity: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 42px;
+  color: white;
+
+  animation-name: show;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+#deadTooth {
+  position: relative;
+  display: none;
+  z-index: 99;
+
+  animation-name: show;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+div#restart {
+  position: relative;
+  visibility: hidden;
+  z-index: 99;
+
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation-name: show;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-play-state: paused;
+}
+
+
+#restart h3 {  
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+#replay {
+  position: relative;
+  font-size: 30px;
+  line-height: 40px;
+  color: yellow;
+  cursor: pointer;
+}
+
+#replay:hover {
+  animation-name: grow-shrink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+}
+
+@keyframes grow-shrink {
+  0% {
+    font-size: 30px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+
+.arrows {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}

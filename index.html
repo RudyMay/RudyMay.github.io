@@ -1,121 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Running Tooth</title>
-  </head>
-  <style>
-    body {
-      width: 100%;
-      overflow: hidden;
-      background-size: cover;
-      background-image: url("imgs/pixelbackground.jpg");
-      overflow-y: auto;
-    }
-    #board {
-      position: relative;
-      width: 600px;
-      height: 500px;
-      margin: 40px auto;
-      border: 2px solid white;
-      background-image: url("imgs/bobble_glow_blue.png");
-      overflow: hidden;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running Tooth</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
 
-    #jet {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: url("imgs/diente-limpio.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      left:0px;
-      bottom: 0px;
-    }
-
-    .bullets {
-      position: absolute;
-      bottom: 40px;
-      left: 51%;
-      width: 20px;
-      height: 20px;
-      background: url('imgs/drop-3.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
-    .candies {
-      position: absolute;
-      top: -80px;
-      width: 50px;
-      height: 50px;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    
-
-    #timer {
-      position: relative;
-      top:5px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    color: white;
-  }
-
-
-  #Leyenda{
-    position:relative;
-    text-align: center;
-    color: white;
-  }
-
-  #Title{
-    position:relative;
-    text-align: center;
-    font-size: 30px;
-    color: hotpink;
-  }
-
-  .level h1{
-    position: relative;
-      top:10px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    color: hotpink;
-  }
-  </style>
+  <h1 id="title">Aprende con Dent</h1>
   
-  <body>
+  <!-- <div id="timer">
+    <label id="minutes">00</label>
+    <label id="colon">:</label>
+    <label id="seconds">00</label>
+  </div> -->
 
-    <div id="Title">
-      <h1>¡Evita los dulces!</h1>
+  <h1 id="level">Nivel 1</h1>
+  
+  <div id="board">
+    <div class="candies"></div>
+    <div id="jet">
+      <img id="tooth" src="imgs/diente-limpio.png">
     </div>
-
-    <div id="timer">
-      <label id="minutes">00</label>
-      <label id="colon">:</label>
-      <label id="seconds">00</label>
-    </div>
-
-    <div class="level" >
-      <h1>Level 1</h1>
-    </div>
-    
-    <div id="board">
-      <div class="candies">
-
+    <h2 id="advice">¡Evita comidas azucaradas!</h2>
+    <div id="messageContainer">      
+      <img id="wingame" src="imgs/MadeIt.png" height="350" width="350">
+      <h2 id="gameover">Has perdido</h2>    
+      <img id="deadTooth" src="imgs/diente-muerto.png" height="100" width="140">
+      <div id="restart">
+        <h3>¿Quieres jugar de nuevo?</h3>
+        <i id="replay" class="material-icons" onclick="restartGame()">replay</i>
       </div>
-      <div id="jet"></div>
     </div>
-    <div id="Leyenda">
-      <h1>Utiliza las teclas derecha e izquierda para evitar los dulces:D</h1>
+  </div>
 
-    </div>
+  <div id="leyenda">
+    <h1>Utiliza las teclas</h1>
+    <p class="arrows">&#11013; &#10145;</p>
+  </div>
 
-    <script src="app.js" defer></script>
+  <script type="text/javascript">
+    function restartGame() {
+      window.location.reload();
+    }
+  </script>
 
-  </body>
+</body>
 </html>
